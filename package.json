@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/slayeroak/liri-bot/issues"
   },
-  "homepage": "https://github.com/slayeroak/liri-bot#readme"
+  "homepage": "https://github.com/slayeroak/liri-bot#readme",
+  "dependencies": {
+    "axios": "^0.19.2"
+  }
 }
