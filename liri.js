@@ -26,8 +26,12 @@ switch (input1) {
     case "concert-this":
         bandsInTown(input2)
         break;
+    case "movie-this":
+        movieSearch(input2)
+        break;
 }
 
+// hit the bandsInTown api and return venue name venue city the event
 function bandsInTown(artist) {
     // artist is equal the inpust2 which was passed in the switch
 
@@ -40,4 +44,36 @@ function bandsInTown(artist) {
         console.log(error);
       });
 }
+
+// Title of the movie.
+// Year the movie came out.
+// IMDB Rating of the movie.
+// Rotten Tomatoes Rating of the movie.
+// Country where the movie was produced.
+// Language of the movie.
+// Plot of the movie.
+// Actors in the movie.
+
+function movieSearch(movie){
+    axios.get("http://www.omdbapi.com/?apikey=a062b41f&t=" + movie)
+    .then(function(data) {
+        console.log("Title of the movie:", data.data.Title)
+        console.log("Year the movie came out:", data.data.Year);
+        console.log("IMDB Rating of the movie:", data.data.Ratings.Value);
+        console.log("Rotten Tomatoes Rating of the movie:", data.data.Ratings[1].Value);
+        console.log("Country where the movie was produced:", data.data.Country);
+        console.log("Language of the movie:", data.data.Language);
+        console.log("Plot of the movie:", data.data.Plot);
+        console.log("Actors in the movie:", data.data.Actors);
+    })
+    .catch(function (error) {
+        console.log(error);
+    });
+    if (movie === "Mr. Nobody") {
+        console.log("Mr. Nobody,' then you should: http://www.imdb.com/title/tt0485947/");
+        console.log("It's on Netflix!")
+    }
+}
+
+
 
