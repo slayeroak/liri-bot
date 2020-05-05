@@ -41,7 +41,7 @@ whatCommand(search, term);
 // bandsInTown Code
 function getBand() {
   if (!term) {
-    term = "Tennis";
+    term = "Rebelution";
   }
   console.log("---- Searching for the next available show ----");
   var artist = term;
@@ -108,6 +108,7 @@ function getBand() {
     });
 }
 
+// Spotify Code
 function spotifyMe() {
   if (!term) {
     term = "crocodile rock elton john";
