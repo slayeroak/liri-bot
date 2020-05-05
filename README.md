@@ -15,3 +15,7 @@ In this assignment, you will make LIRI. LIRI is like iPhone's SIRI. However, whi
 
 ### Functionality Video
 ![](liribot.gif)
+
+
+### Functionality Video
+![](liribot2.gif)
